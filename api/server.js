@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-// const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/auth');
 // const productRoutes = require('./routes/products');
 // const orderRoutes = require('./routes/orders');
 // const categoryRoutes = require('./routes/categories');
@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://nimamemarzadeh:Test1377@cluster0.bhxhomq.mongodb
 .catch(err => console.log(err));
 
 // Routes
-// app.use('/api/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 // app.use('/api/products', productRoutes);
 // app.use('/api/orders', orderRoutes);
 // app.use('/api/categories', categoryRoutes);
